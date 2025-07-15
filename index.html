@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملخص الفصل الأول: مدخل إلى عالم الإدارة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --dark-text: #333A45;
+            --light-text: #7f8c8d;
+            --bg-color: #F7F9FC;
+            --container-bg: #FFFFFF;
+            --border-color: #EAECEE;
+            --correct-answer: #28a745;
+            --wrong-answer: #dc3545;
+        }
+        body {
+            font-family: 'Readex Pro', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--dark-text);
+            line-height: 2.3;
+            margin: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+        }
+        .header h1 { font-size: 3em; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .header p { font-size: 1.5em; font-weight: 400; margin-top: 10px; opacity: 0.9; }
+        .container {
+            max-width: 1200px;
+            margin: -80px auto 40px auto;
+            background-color: var(--container-bg);
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        h2 { font-size: 2.5em; font-weight: 600; color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); padding-bottom: 15px; margin-top: 50px; display: inline-block; }
+        h3 { font-size: 1.8em; color: var(--dark-text); margin-top: 30px; border-right: 4px solid var(--primary-color); padding-right: 15px; }
+        h4 { font-size: 1.4em; color: var(--dark-text); }
+        ul, ol { padding-right: 25px; text-align: justify; }
+        li { margin-bottom: 15px; }
+        strong { color: #D9534F; font-weight: 600; }
+        hr { border: 0; height: 1px; background-color: var(--border-color); margin: 80px 0; }
+        
+        .svg-container { text-align: center; margin: 40px 0; }
+        svg { max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; background-color: #fdfdfd; }
+        .handwritten { font-family: 'Readex Pro', sans-serif; }
+        
+        .hypothesis-explanation { background-color: #f8f9fa; border: 1px solid #e9ecef; border-right: 5px solid var(--secondary-color); padding: 20px; margin-top: 30px; border-radius: 8px; }
+        .hypothesis-explanation p { margin: 10px 0; font-size: 1.1em; }
+
+        /* Quiz Styles */
+        .quiz-container { margin-top: 40px; }
+        .question-block { margin-bottom: 30px; background-color: #fdfdff; padding: 20px; border-radius: 8px; border-left: 5px solid var(--primary-color); }
+        .question-block p { font-weight: 600; font-size: 1.2em; }
+        .options label { display: block; margin: 10px 0; padding: 10px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+        .options label:hover { background-color: #f1f1f1; }
+        .options input { margin-left: 10px; }
+        #submit-quiz {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        #submit-quiz:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.15); }
+        #quiz-results { text-align: center; font-size: 1.8em; font-weight: 700; margin-top: 30px; }
+        .correct { color: var(--correct-answer); font-weight: bold; }
+        .wrong { color: var(--wrong-answer); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>ملخص الفصل الأول: مدخل إلى عالم الإدارة</h1>
+        <p>إعداد الطالب: قيس طلال الجازي</p>
+    </header>
+
+    <div class="container">
+        <!-- ... نفس محتوى الشرح والجدول ... -->
+        <h2>أولاً: مثال تطبيقي على نموذج الدراسة</h2>
+        <h3>عنوان الدراسة المقترح: "أثر القيادة الرقمية على القدرة التنافسية في شركات الاتصالات الأردنية"</h3>
+
+        <div class="svg-container">
+            <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <marker id="arrowhead" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                        <path d="M 0 5 L 10 0 L 10 10 z" transform="rotate(180 5 5)" fill="black" />
+                    </marker>
+                </defs>
+                <g>
+                    <rect x="380" y="50" width="200" height="200" stroke="black" stroke-width="2" fill="none"/>
+                    <text x="480" y="80" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle">القيادة الرقمية</text>
+                    <rect x="400" y="105" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
+                    <text x="480" y="135" class="handwritten" font-size="14" text-anchor="middle">الرؤية الاستشرافية</text>
+                    <rect x="400" y="175" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
+                    <text x="480" y="205" class="handwritten" font-size="14" text-anchor="middle">تمكين المواهب</text>
+                </g>
+                <g>
+                    <rect x="20" y="50" width="200" height="200" stroke="black" stroke-width="2" fill="none"/>
+                    <text x="120" y="80" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle">القدرة التنافسية</text>
+                    <rect x="40" y="105" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
+                    <text x="120" y="135" class="handwritten" font-size="14" text-anchor="middle">جودة الخدمة</text>
+                    <rect x="40" y="175" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
+                    <text x="120" y="205" class="handwritten" font-size="14" text-anchor="middle">حصة السوق</text>
+                </g>
+                <path d="M 380 80 H 220" stroke="black" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+                <text x="300" y="75" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle" fill="white" stroke="white" stroke-width="6">Ho1</text>
+                <text x="300" y="75" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle">Ho1</text>
+                <line x1="400" y1="130" x2="400" y2="190" stroke="black" stroke-width="1.5"/>
+                <path d="M 400 160 H 220" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                <text x="310" y="155" class="handwritten" font-size="14" font-weight="bold" text-anchor="middle">Ho1.1</text>
+                <text x="310" y="175" class="handwritten" font-size="14" font-weight="bold" text-anchor="middle">Ho1.2</text>
+            </svg>
+        </div>
+
+        <div class="hypothesis-explanation">
+            <h3>شرح الفرضيات الصفرية للنموذج</h3>
+            <p><strong>الفرضية الرئيسية (Ho1):</strong> لا يوجد أثر ذو دلالة إحصائية للقيادة الرقمية (كمتغير مستقل) على القدرة التنافسية (كمتغير تابع) في شركات الاتصالات الأردنية عند مستوى دلالة (α ≤ 0.05).</p>
+            <p><strong>الفرضية الفرعية الأولى (Ho1.1):</strong> لا يوجد أثر ذو دلالة إحصائية لبُعد الرؤية الاستشرافية على القدرة التنافسية.</p>
+            <p><strong>الفرضية الفرعية الثانية (Ho1.2):</strong> لا يوجد أثر ذو دلالة إحصائية لبُعد تمكين المواهب على القدرة التنافسية.</p>
+        </div>
+        
+        <hr>
+
+        <h2>ثانياً: شرح شامل ودقيق للفصل الأول - المدخل إلى البحث العلمي</h2>
+        
+        <h3>1. مفهوم البحث وطرق الوصول إلى المعرفة</h3>
+        <ul>
+            <li><strong>مفهوم البحث:</strong> هو طريقة منظمة وفحص استفساري يهدف لاكتشاف حقائق جديدة، أو التحقق من صحة القديمة، وفهم العلاقات التي تربطها أو القوانين التي تحكمها.</li>
+            <li><strong>طرق الوصول إلى المعرفة:</strong>
+                <ol>
+                    <li><strong>المصادفة (Chance):</strong> اكتشاف المعرفة عرضيًا دون تخطيط.</li>
+                    <li><strong>التجربة والخطأ (Trial and Error):</strong> محاولات متكررة للوصول لتفسير منطقي.</li>
+                    <li><strong>السلطة والتقاليد (Authority and Traditional):</strong> الاعتماد على آراء الخبراء والشخصيات المرجعية والعادات الموروثة.</li>
+                    <li><strong>التكهن والجدل والحوار (Deduction):</strong> استخدام المنطق والمناظرات للانتقال من العام إلى الخاص.</li>
+                    <li><strong>الطريقة العلمية (Scientific Method / Induction):</strong> أسلوب منظم قائم على التجربة وتتبع الجزئيات للوصول إلى تعميمات (الانتقال من الخاص إلى العام).</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3>2. أهداف البحث العلمي وخصائصه</h3>
+        <h4>أ. أهداف البحث العلمي</h4>
+        <ul>
+            <li><strong>الوصف (Description):</strong> جمع البيانات لوصف ملامح ظاهرة ما بدقة.</li>
+            <li><strong>التفسير (Explanation):</strong> اكتشاف أسباب حدوث الظاهرة.</li>
+            <li><strong>التنبؤ (Prediction):</strong> توقع ما سيحدث للظاهرة في المستقبل.</li>
+            <li><strong>الضبط والسيطرة (Control):</strong> التحكم في العوامل المؤثرة على الظاهرة.</li>
+        </ul>
+        <h4>ب. صفات الباحث</h4>
+        <ul>
+            <li><strong>صفات خلقية:</strong> الصبر، تحمل المشاق، التواضع، قبول النقد، الإبداع والذكاء.</li>
+            <li><strong>صفات علمية:</strong> الإلمام بالموضوع، القدرة على القراءة الواسعة، الإيمان بدور العلم، الدقة في جمع الأدلة، القدرة على التحليل والربط، والأمانة العلمية.</li>
+        </ul>
+        <h4>ج. الخصائص الأساسية للبحث العلمي</h4>
+        <ol>
+            <li><strong>هادف (Purposive):</strong> وجود هدف محدد وواضح.</li>
+            <li><strong>الموضوعية (Objectivity):</strong> البعد عن التحيز الشخصي والذاتية.</li>
+            <li><strong>التثبت (Verification):</strong> إمكانية التحقق من النتائج وملاحظتها.</li>
+            <li><strong>قابلية التعميم (Generalizability):</strong> إمكانية تطبيق النتائج على سياقات أوسع.</li>
+            <li><strong>قابلية الاختبار (Testability):</strong> إمكانية اختبار الفروض إحصائياً.</li>
+            <li><strong>البساطة والاقتصاد (Parsimony):</strong> استخدام أبسط تفسير ممكن للظاهرة.</li>
+            <li><strong>الدقة والثقة (Precision and Confidence):</strong> مدى اقتراب النتائج من الواقع ودرجة اليقين بصحتها.</li>
+            <li><strong>الاستنباط (Deduction) والاستقراء (Induction):</strong> وهما عمليتان متكاملتان في البحث العلمي.</li>
+        </ol>
+
+        <h3>3. خطوات ومراحل البحث العلمي</h3>
+        <p>البحث العلمي عملية متكاملة تتبع خطوات متسلسلة ومنطقية:</p>
+        <ol>
+            <li><strong>الشعور والإحساس بالمشكلة:</strong> نقطة البداية التي تثير تساؤل الباحث.</li>
+            <li><strong>تحديد مشكلة البحث:</strong> تحويل الموضوع العام إلى سؤال محدد وقابل للبحث.</li>
+            <li><strong>تحديد أهمية البحث:</strong> بيان القيمة العلمية والعملية التي سيضيفها البحث.</li>
+            <li><strong>تحديد أهداف البحث:</strong> بيان ما يسعى البحث لتحقيقه بشكل محدد ودقيق.</li>
+            <li><strong>بناء الإطار النظري والدراسات السابقة:</strong> مراجعة الأدبيات العلمية المنشورة.</li>
+            <li><strong>تحديد وصياغة أسئلة وفروض البحث.</strong></li>
+            <li><strong>تحديد منهج البحث:</strong> ويشمل تحديد (نوع وطبيعة البحث، استراتيجية البحث، مجتمع وعينة الدراسة، وحدة التحليل، طرائق جمع البيانات).</li>
+            <li><strong>تحليل البيانات واختبار الفرضيات:</strong> استخدام الأساليب الإحصائية المناسبة.</li>
+            <li><strong>عرض النتائج والتوصيات:</strong> عرض ما تم التوصل إليه وتقديم توصيات عملية.</li>
+            <li><strong>توثيق المراجع وكتابة التقرير النهائي.</strong></li>
+        </ol>
+
+        <h3>4. صياغة الفرضيات</h3>
+        <h4>أ. أنواع الفرضيات</h4>
+        <ul>
+            <li><strong>الفرضية الصفرية (Null Hypothesis - H₀):</strong> تفترض <strong>عدم وجود</strong> فرق أو علاقة ذات دلالة إحصائية. تُصاغ بصيغة النفي.</li>
+            <li><strong>الفرضية البديلة (Research Hypothesis - H₁):</strong> تفترض <strong>وجود</strong> فرق أو علاقة. وتأتي في شكلين:
+                <ul>
+                    <li><strong>فرضية غير متجهة (Non-directional):</strong> تحدد وجود اختلاف دون تحديد اتجاهه (مثال: M₁ ≠ M₂).</li>
+                    <li><strong>فرضية متجهة (Directional):</strong> تحدد اتجاه الاختلاف (مثال: M₁ > M₂ أو M₁ < M₂).</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>ب. خصائص الفرضية الجيدة</h4>
+        <p>يجب أن تكون الفرضية مناسبة للغرض، بسيطة وواضحة، قادرة على شرح الحقائق، قابلة للاختبار والقياس، ومعقولة ومنسجمة مع الحقائق العلمية.</p>
+
+        <h3>5. هيكلية كتابة البحث العلمي</h3>
+        <p>تختلف هيكلية كتابة التقرير النهائي للبحث باختلاف الجهة المقدم إليها:</p>
+        <ul>
+            <li><strong>للنشر في مجلة علمية (مقال علمي):</strong> يكون البحث موجزًا ومكثفًا ومكتوبًا كنص متصل. عناصره الرئيسية: (عنوان، ملخص، مقدمة، منهجية، نتائج ومناقشة، مراجع).</li>
+            <li><strong>للحصول على درجة علمية (رسالة/أطروحة):</strong> يكون مفصلاً ومقسماً إلى فصول متتالية. عناصره: (صفحات تمهيدية، فصول الدراسة: مقدمة، إطار نظري، منهجية، تحليل ومناقشة، توصيات، ثم قائمة المراجع والملاحق).</li>
+        </ul>
+
+        <hr>
+
+        <!-- Quiz Section -->
+        <h2>امتحان محوسب: اختبر فهمك للفصل الأول</h2>
+        <div class="quiz-container">
+            <form id="quiz-form">
+                <!-- Questions will be inserted here by JavaScript -->
+            </form>
+            <button id="submit-quiz">إظهار النتائج</button>
+            <div id="quiz-results"></div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quizData = [
+                { question: "1. ما هو التعريف الأدق للبحث العلمي؟", options: ["مجموعة آراء شخصية", "طريقة منظمة وفحص استفساري", "جمع معلومات عشوائي", "قراءة الكتب القديمة"], answer: "طريقة منظمة وفحص استفساري" },
+                { question: "2. الانتقال من ملاحظة الجزئيات إلى بناء نظرية عامة يسمى:", options: ["الاستنباط (Deduction)", "الجدل والحوار", "السلطة والتقاليد", "الاستقراء (Induction)"], answer: "الاستقراء (Induction)" },
+                { question: "3. أي من التالي ليس من أهداف البحث العلمي الرئيسية؟", options: ["الوصف", "التفسير", "النقد الشخصي", "التنبؤ"], answer: "النقد الشخصي" },
+                { question: "4. الخاصية التي تعني البعد عن التحيز الشخصي في البحث هي:", options: ["قابلية التعميم", "الموضوعية", "الدقة", "البساطة"], answer: "الموضوعية" },
+                { question: "5. ما هي أول خطوة في مراحل البحث العلمي؟", options: ["جمع البيانات", "كتابة التقرير", "الشعور والإحساس بالمشكلة", "تحليل البيانات"], answer: "الشعور والإحساس بالمشكلة" },
+                { question: "6. الفرضية التي تفترض 'عدم وجود أثر' تسمى:", options: ["الفرضية البديلة", "الفرضية المتجهة", "الفرضية الصفرية", "الفرضية غير المتجهة"], answer: "الفرضية الصفرية" },
+                { question: "7. 'أداء الذكور أعلى من أداء الإناث' هي مثال على فرضية:", options: ["صفرية", "متجهة", "غير متجهة", "عامة"], answer: "متجهة" },
+                { question: "8. الخاصية التي تعني إمكانية تطبيق نتائج العينة على مجتمع أكبر هي:", options: ["قابلية الاختبار", "الدقة والثقة", "قابلية التعميم", "الموضوعية"], answer: "قابلية التعميم" },
+                { question: "9. الهدف الأعلى والأصعب في البحث العلمي هو:", options: ["الوصف", "التفسير", "التنبؤ", "الضبط والسيطرة"], answer: "الضبط والسيطرة" },
+                { question: "10. الاعتماد على آراء الخبراء والشيوخ في المعرفة يمثل مرحلة:", options: ["الطريقة العلمية", "السلطة والتقاليد", "التجربة والخطأ", "المصادفة"], answer: "السلطة والتقاليد" },
+                { question: "11. 'فحص استفساري منظم' هو جزء من تعريف:", options: ["الفرضية", "النظرية", "البحث العلمي", "المشكلة البحثية"], answer: "البحث العلمي" },
+                { question: "12. خاصية 'البساطة والاقتصاد' (Parsimony) تعني:", options: ["استخدام أغلى الأدوات", "تقديم أبسط تفسير ممكن", "جعل البحث معقداً", "تجاهل التكاليف"], answer: "تقديم أبسط تفسير ممكن" },
+                { question: "13. أي مما يلي يعتبر من الصفات الخلقية للباحث؟", options: ["القدرة على التحليل الإحصائي", "الصبر وتحمل المشاق", "مهارة استخدام البرامج", "كتابة التقارير"], answer: "الصبر وتحمل المشاق" },
+                { question: "14. المرحلة التي تلي تحديد المشكلة مباشرة هي:", options: ["جمع البيانات", "تحديد أهمية وأهداف البحث", "كتابة الملخص", "تقديم التوصيات"], answer: "تحديد أهمية وأهداف البحث" },
+                { question: "15. الفرضية H₁: M₁ ≠ M₂ هي فرضية:", options: ["صفرية", "متجهة", "بديلة غير متجهة", "بديلة متجهة"], answer: "بديلة غير متجهة" },
+                { question: "16. مراجعة الأدبيات السابقة تسمى:", options: ["الإطار النظري", "النتائج", "الملاحق", "المقدمة"], answer: "الإطار النظري" },
+                { question: "17. 'الأمانة العلمية' هي من أهم صفات الباحث:", options: ["الخلقية", "العلمية", "الشخصية", "الاجتماعية"], answer: "العلمية" },
+                { question: "18. آخر خطوة عملية في البحث قبل كتابة التقرير هي:", options: ["تحديد المشكلة", "عرض النتائج وتقديم التوصيات", "اختيار العينة", "صياغة الفرضيات"], answer: "عرض النتائج وتقديم التوصيات" },
+                { question: "19. خاصية (Verification) تعني:", options: ["التعميم", "التثبت والتحقق", "الموضوعية", "البساطة"], answer: "التثبت والتحقق" },
+                { question: "20. ما الذي يميز هيكلية البحث المقدم لرسالة علمية عن المقال؟", options: ["وجود مراجع", "تقسيمه إلى فصول مفصلة", "وجود عنوان", "لا فرق بينهما"], answer: "تقسيمه إلى فصول مفصلة" },
+                { question: "21. ما هو الرمز الشائع للفرضية الصفرية؟", options: ["Hₐ", "H₁", "H₀", "Hₓ"], answer: "H₀" },
+                { question: "22. عندما يهدف البحث إلى اكتشاف أسباب ظاهرة ما، فإنه يحقق هدف:", options: ["الوصف", "التنبؤ", "التفسير", "الضبط"], answer: "التفسير" },
+                { question: "23. القدرة على اختبار الفروض إحصائياً هي خاصية:", options: ["قابلية الاختبار (Testability)", "المرونة", "الموضوعية", "قابلية التعميم"], answer: "قابلية الاختبار (Testability)" },
+                { question: "24. أي من طرق المعرفة التالية هو الأكثر اعتمادًا في العصر الحديث؟", options: ["التجربة والخطأ", "السلطة والتقاليد", "الطريقة العلمية", "المصادفة"], answer: "الطريقة العلمية" },
+                { question: "25. 'درجة اليقين بصحة النتائج' هي تعريف لـ:", options: ["الدقة (Precision)", "الثقة (Confidence)", "الموضوعية (Objectivity)", "الاستقراء (Induction)"], answer: "الثقة (Confidence)" }
+            ];
+
+            const quizForm = document.getElementById('quiz-form');
+            const submitButton = document.getElementById('submit-quiz');
+            const resultsDiv = document.getElementById('quiz-results');
+
+            // Populate quiz
+            quizData.forEach((item, index) => {
+                const questionBlock = document.createElement('div');
+                questionBlock.classList.add('question-block');
+
+                const questionText = document.createElement('p');
+                questionText.textContent = item.question;
+                questionBlock.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.classList.add('options');
+
+                item.options.forEach(option => {
+                    const label = document.createElement('label');
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.name = `question${index}`;
+                    radio.value = option;
+                    
+                    label.appendChild(radio);
+                    label.appendChild(document.createTextNode(option));
+                    optionsDiv.appendChild(label);
+                });
+
+                questionBlock.appendChild(optionsDiv);
+                quizForm.appendChild(questionBlock);
+            });
+
+            // Handle submission
+            submitButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                let score = 0;
+                
+                quizData.forEach((item, index) => {
+                    const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                    const labels = document.querySelectorAll(`input[name="question${index}"]`);
+                    
+                    labels.forEach(label => {
+                        const parentLabel = label.parentElement;
+                        parentLabel.style.backgroundColor = ''; // Reset background
+                        parentLabel.classList.remove('correct', 'wrong');
+
+                        if (label.value === item.answer) {
+                            parentLabel.classList.add('correct');
+                        }
+                    });
+
+                    if (selectedOption) {
+                        const parentLabel = selectedOption.parentElement;
+                        if (selectedOption.value === item.answer) {
+                            score++;
+                        } else {
+                            parentLabel.classList.add('wrong');
+                        }
+                    }
+                });
+                
+                resultsDiv.textContent = `نتيجتك هي: ${score} من ${quizData.length}`;
+                resultsDiv.style.color = score > quizData.length / 2 ? 'var(--correct-answer)' : 'var(--wrong-answer)';
+                window.scrollTo(0, document.body.scrollHeight);
+            });
+        });
+    </script>
+</body>
+</html>
