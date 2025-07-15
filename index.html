@@ -83,6 +83,29 @@
         #quiz-results { text-align: center; font-size: 1.8em; font-weight: 700; margin-top: 30px; }
         .correct { color: var(--correct-answer); font-weight: bold; }
         .wrong { color: var(--wrong-answer); font-weight: bold; }
+        
+        /* --- Responsive Design for Mobile --- */
+        @media (max-width: 768px) {
+            body { line-height: 2.0; }
+            .header { padding: 30px 15px; border-radius: 0; }
+            .header h1 { font-size: 2.2em; }
+            .header p { font-size: 1.2em; }
+            
+            .container {
+                margin: 0 auto 20px auto;
+                padding: 25px 20px;
+                border-radius: 0;
+            }
+            
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.5em; }
+            ul, ol, p { font-size: 1.05em; }
+
+            .hypothesis-explanation { padding: 15px; }
+            .hypothesis-explanation p { font-size: 1em; }
+
+            .question-block p { font-size: 1.1em; }
+        }
     </style>
 </head>
 <body>
@@ -264,53 +287,42 @@
             const submitButton = document.getElementById('submit-quiz');
             const resultsDiv = document.getElementById('quiz-results');
 
-            // Populate quiz
             quizData.forEach((item, index) => {
                 const questionBlock = document.createElement('div');
                 questionBlock.classList.add('question-block');
-
                 const questionText = document.createElement('p');
                 questionText.textContent = item.question;
                 questionBlock.appendChild(questionText);
-
                 const optionsDiv = document.createElement('div');
                 optionsDiv.classList.add('options');
-
                 item.options.forEach(option => {
                     const label = document.createElement('label');
                     const radio = document.createElement('input');
                     radio.type = 'radio';
                     radio.name = `question${index}`;
                     radio.value = option;
-                    
                     label.appendChild(radio);
                     label.appendChild(document.createTextNode(option));
                     optionsDiv.appendChild(label);
                 });
-
                 questionBlock.appendChild(optionsDiv);
                 quizForm.appendChild(questionBlock);
             });
 
-            // Handle submission
             submitButton.addEventListener('click', function (e) {
                 e.preventDefault();
                 let score = 0;
-                
                 quizData.forEach((item, index) => {
                     const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
                     const labels = document.querySelectorAll(`input[name="question${index}"]`);
-                    
                     labels.forEach(label => {
                         const parentLabel = label.parentElement;
-                        parentLabel.style.backgroundColor = ''; // Reset background
+                        parentLabel.style.backgroundColor = '';
                         parentLabel.classList.remove('correct', 'wrong');
-
                         if (label.value === item.answer) {
                             parentLabel.classList.add('correct');
                         }
                     });
-
                     if (selectedOption) {
                         const parentLabel = selectedOption.parentElement;
                         if (selectedOption.value === item.answer) {
@@ -320,10 +332,9 @@
                         }
                     }
                 });
-                
                 resultsDiv.textContent = `نتيجتك هي: ${score} من ${quizData.length}`;
                 resultsDiv.style.color = score > quizData.length / 2 ? 'var(--correct-answer)' : 'var(--wrong-answer)';
-                window.scrollTo(0, document.body.scrollHeight);
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             });
         });
     </script>
