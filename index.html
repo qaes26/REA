@@ -4,152 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ملخص الفصل الأول: مدخل إلى عالم الإدارة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4A90E2;
-            --secondary-color: #50E3C2;
-            --dark-text: #333A45;
-            --light-text: #7f8c8d;
-            --bg-color: #F7F9FC;
-            --container-bg: #FFFFFF;
-            --border-color: #EAECEE;
-            --correct-answer: #28a745;
-            --wrong-answer: #dc3545;
+            --primary-color: #8E44AD; /* Elegant Purple */
+            --secondary-color: #3498DB; /* Bright Blue */
+            --bg-color: #2c3e50; /* Dark Blue-Gray Background */
+            --container-bg: #34495e; /* Lighter container background */
+            --text-color: #ecf0f1; /* Light text for dark background */
+            --heading-color: #ffffff;
+            --border-color: #4a627a;
+            --correct-answer: #2ecc71;
+            --wrong-answer: #e74c3c;
         }
         body {
-            font-family: 'Readex Pro', sans-serif;
+            font-family: 'Tajawal', sans-serif;
             background-color: var(--bg-color);
-            color: var(--dark-text);
+            color: var(--text-color);
             line-height: 2.3;
             margin: 0;
         }
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png');
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
-            border-bottom-left-radius: 50% 20%;
-            border-bottom-right-radius: 50% 20%;
         }
-        .header h1 { font-size: 3em; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
-        .header p { font-size: 1.5em; font-weight: 400; margin-top: 10px; opacity: 0.9; }
+        .hero h1 {
+            font-size: 3.2em;
+            font-weight: 800;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.6em;
+            font-weight: 400;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
         .container {
             max-width: 1200px;
-            margin: -80px auto 40px auto;
+            margin: 40px auto;
             background-color: var(--container-bg);
             padding: 40px 60px;
             border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 10;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
         }
-        h2 { font-size: 2.5em; font-weight: 600; color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); padding-bottom: 15px; margin-top: 50px; display: inline-block; }
-        h3 { font-size: 1.8em; color: var(--dark-text); margin-top: 30px; border-right: 4px solid var(--primary-color); padding-right: 15px; }
-        h4 { font-size: 1.4em; color: var(--dark-text); }
+        h2 { 
+            font-size: 2.6em; 
+            font-weight: 700;
+            color: var(--heading-color); 
+            border-bottom: 3px solid var(--primary-color); 
+            padding-bottom: 15px; 
+            margin-top: 50px; 
+        }
+        h3 { 
+            font-size: 1.9em; 
+            color: var(--secondary-color); 
+            margin-top: 30px; 
+        }
+        h4 { font-size: 1.5em; color: var(--text-color); }
         ul, ol { padding-right: 25px; text-align: justify; }
         li { margin-bottom: 15px; }
-        strong { color: #D9534F; font-weight: 600; }
+        strong { color: #f1c40f; font-weight: 600; }
         hr { border: 0; height: 1px; background-color: var(--border-color); margin: 80px 0; }
         
         .svg-container { text-align: center; margin: 40px 0; }
-        svg { max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; background-color: #fdfdfd; }
-        .handwritten { font-family: 'Readex Pro', sans-serif; }
+        svg { max-width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; background-color: #2c3e50; }
         
-        .hypothesis-explanation { background-color: #f8f9fa; border: 1px solid #e9ecef; border-right: 5px solid var(--secondary-color); padding: 20px; margin-top: 30px; border-radius: 8px; }
+        .hypothesis-explanation { background-color: rgba(0,0,0,0.1); border: 1px solid var(--border-color); border-right: 5px solid var(--primary-color); padding: 20px; margin-top: 30px; border-radius: 8px; }
         .hypothesis-explanation p { margin: 10px 0; font-size: 1.1em; }
+        .study-details { text-align: center; margin-bottom: 20px; font-size: 1.2em; }
 
         /* Quiz Styles */
         .quiz-container { margin-top: 40px; }
-        .question-block { margin-bottom: 30px; background-color: #fdfdff; padding: 20px; border-radius: 8px; border-left: 5px solid var(--primary-color); }
-        .question-block p { font-weight: 600; font-size: 1.2em; }
-        .options label { display: block; margin: 10px 0; padding: 10px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
-        .options label:hover { background-color: #f1f1f1; }
+        .question-block { margin-bottom: 30px; background-color: #2c3e50; padding: 20px; border-radius: 8px; border-left: 5px solid var(--secondary-color); }
+        .question-block p { font-weight: 600; font-size: 1.2em; color: var(--heading-color); }
+        .options label { display: block; margin: 10px 0; padding: 12px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; border: 1px solid var(--border-color); }
+        .options label:hover { background-color: #4a627a; }
         .options input { margin-left: 10px; }
         #submit-quiz {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            font-size: 1.5em;
-            font-weight: 700;
-            color: white;
-            background: linear-gradient(135deg, #1abc9c, #16a085);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            display: block; width: 100%; padding: 15px; font-size: 1.5em; font-weight: 700;
+            color: white; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s;
         }
-        #submit-quiz:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.15); }
+        #submit-quiz:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.25); }
         #quiz-results { text-align: center; font-size: 1.8em; font-weight: 700; margin-top: 30px; }
-        .correct { color: var(--correct-answer); font-weight: bold; }
-        .wrong { color: var(--wrong-answer); font-weight: bold; }
+        .correct { background-color: rgba(46, 204, 113, 0.2); border-color: var(--correct-answer) !important; color: var(--correct-answer); font-weight: bold; }
+        .wrong { background-color: rgba(231, 76, 60, 0.2); border-color: var(--wrong-answer) !important; color: var(--wrong-answer); font-weight: bold; }
         
-        /* --- Responsive Design for Mobile --- */
         @media (max-width: 768px) {
-            body { line-height: 2.0; }
-            .header { padding: 30px 15px; border-radius: 0; }
-            .header h1 { font-size: 2.2em; }
-            .header p { font-size: 1.2em; }
-            
-            .container {
-                margin: 0 auto 20px auto;
-                padding: 25px 20px;
-                border-radius: 0;
-            }
-            
-            h2 { font-size: 1.8em; }
-            h3 { font-size: 1.5em; }
-            ul, ol, p { font-size: 1.05em; }
-
-            .hypothesis-explanation { padding: 15px; }
-            .hypothesis-explanation p { font-size: 1em; }
-
-            .question-block p { font-size: 1.1em; }
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.3em; }
+            .container { padding: 30px 20px; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.6em; }
         }
     </style>
 </head>
 <body>
 
-    <header class="header">
+    <header class="hero">
         <h1>ملخص الفصل الأول: مدخل إلى عالم الإدارة</h1>
         <p>إعداد الطالب: قيس طلال الجازي</p>
     </header>
 
     <div class="container">
-        <!-- ... نفس محتوى الشرح والجدول ... -->
         <h2>أولاً: مثال تطبيقي على نموذج الدراسة</h2>
-        <h3>عنوان الدراسة المقترح: "أثر القيادة الرقمية على القدرة التنافسية في شركات الاتصالات الأردنية"</h3>
+        <div class="study-details">
+            <p><strong>العنوان:</strong> أثر القيادة الرقمية (<strong>المتغير المستقل</strong>) على القدرة التنافسية (<strong>المتغير التابع</strong>)</p>
+            <p><strong>مجتمع الدراسة:</strong> شركات الاتصالات الأردنية</p>
+        </div>
 
         <div class="svg-container">
             <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <marker id="arrowhead" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-                        <path d="M 0 5 L 10 0 L 10 10 z" transform="rotate(180 5 5)" fill="black" />
-                    </marker>
-                </defs>
+                <defs><marker id="arrowhead" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 5 L 10 0 L 10 10 z" transform="rotate(180 5 5)" fill="#ecf0f1" /></marker></defs>
                 <g>
-                    <rect x="380" y="50" width="200" height="200" stroke="black" stroke-width="2" fill="none"/>
-                    <text x="480" y="80" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle">القيادة الرقمية</text>
-                    <rect x="400" y="105" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
-                    <text x="480" y="135" class="handwritten" font-size="14" text-anchor="middle">الرؤية الاستشرافية</text>
-                    <rect x="400" y="175" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
-                    <text x="480" y="205" class="handwritten" font-size="14" text-anchor="middle">تمكين المواهب</text>
+                    <rect x="380" y="50" width="200" height="200" stroke="#ecf0f1" stroke-width="2" fill="none"/><text x="480" y="80" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle" fill="#ecf0f1">القيادة الرقمية</text>
+                    <rect x="400" y="105" width="160" height="50" rx="25" stroke="#ecf0f1" stroke-width="1.5" fill="none"/><text x="480" y="135" class="handwritten" font-size="14" text-anchor="middle" fill="#ecf0f1">الرؤية الاستشرافية</text>
+                    <rect x="400" y="175" width="160" height="50" rx="25" stroke="#ecf0f1" stroke-width="1.5" fill="none"/><text x="480" y="205" class="handwritten" font-size="14" text-anchor="middle" fill="#ecf0f1">تمكين المواهب</text>
                 </g>
                 <g>
-                    <rect x="20" y="50" width="200" height="200" stroke="black" stroke-width="2" fill="none"/>
-                    <text x="120" y="80" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle">القدرة التنافسية</text>
-                    <rect x="40" y="105" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
-                    <text x="120" y="135" class="handwritten" font-size="14" text-anchor="middle">جودة الخدمة</text>
-                    <rect x="40" y="175" width="160" height="50" rx="25" stroke="black" stroke-width="1.5" fill="none"/>
-                    <text x="120" y="205" class="handwritten" font-size="14" text-anchor="middle">حصة السوق</text>
+                    <rect x="20" y="50" width="200" height="200" stroke="#ecf0f1" stroke-width="2" fill="none"/><text x="120" y="80" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle" fill="#ecf0f1">القدرة التنافسية</text>
+                    <rect x="40" y="105" width="160" height="50" rx="25" stroke="#ecf0f1" stroke-width="1.5" fill="none"/><text x="120" y="135" class="handwritten" font-size="14" text-anchor="middle" fill="#ecf0f1">جودة الخدمة</text>
+                    <rect x="40" y="175" width="160" height="50" rx="25" stroke="#ecf0f1" stroke-width="1.5" fill="none"/><text x="120" y="205" class="handwritten" font-size="14" text-anchor="middle" fill="#ecf0f1">حصة السوق</text>
                 </g>
-                <path d="M 380 80 H 220" stroke="black" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-                <text x="300" y="75" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle" fill="white" stroke="white" stroke-width="6">Ho1</text>
-                <text x="300" y="75" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle">Ho1</text>
-                <line x1="400" y1="130" x2="400" y2="190" stroke="black" stroke-width="1.5"/>
-                <path d="M 400 160 H 220" stroke="black" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-                <text x="310" y="155" class="handwritten" font-size="14" font-weight="bold" text-anchor="middle">Ho1.1</text>
-                <text x="310" y="175" class="handwritten" font-size="14" font-weight="bold" text-anchor="middle">Ho1.2</text>
+                <path d="M 380 80 H 220" stroke="#ecf0f1" stroke-width="2.5" marker-end="url(#arrowhead)"/><text x="300" y="75" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50" stroke="#2c3e50" stroke-width="6">Ho1</text><text x="300" y="75" class="handwritten" font-size="16" font-weight="bold" text-anchor="middle" fill="#ecf0f1">Ho1</text>
+                <line x1="400" y1="130" x2="400" y2="190" stroke="#ecf0f1" stroke-width="1.5"/><path d="M 400 160 H 220" stroke="#ecf0f1" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                <text x="310" y="155" class="handwritten" font-size="14" font-weight="bold" text-anchor="middle" fill="#ecf0f1">Ho1.1</text>
+                <text x="310" y="175" class="handwritten" font-size="14" font-weight="bold" text-anchor="middle" fill="#ecf0f1">Ho1.2</text>
             </svg>
         </div>
 
@@ -203,7 +187,16 @@
             <li><strong>الاستنباط (Deduction) والاستقراء (Induction):</strong> وهما عمليتان متكاملتان في البحث العلمي.</li>
         </ol>
 
-        <h3>3. خطوات ومراحل البحث العلمي</h3>
+        <h3>3. العقبات التي تواجه تطبيق البحوث العلمية في الإدارة</h3>
+        <p>تختلف طبيعة المشكلات في العلوم الإدارية عنها في العلوم الطبيعية، مما يفرض بعض العقبات:</p>
+        <ul>
+            <li><strong>تعقيد الظواهر الاجتماعية:</strong> السلوك الإنساني يتأثر بعوامل نفسية ومزاجية متعددة، مما يجعل دراسته معقدة.</li>
+            <li><strong>صعوبة استخدام الطرق المخبرية:</strong> من الصعب عزل الظواهر الإدارية ووضعها تحت ظروف الضبط والرقابة التامة كما في المختبر.</li>
+            <li><strong>فقدان التجانس:</strong> كل ظاهرة إدارية لها خصوصيتها، مما يجعل من الصعب تجريد العوامل الإنسانية والوصول إلى قانون عام.</li>
+            <li><strong>صعوبة تحقيق الموضوعية الكاملة:</strong> الباحث في العلوم الإنسانية هو جزء من الظاهرة التي يدرسها، مما قد يؤثر على موضوعيته.</li>
+        </ul>
+
+        <h3>4. خطوات ومراحل البحث العلمي</h3>
         <p>البحث العلمي عملية متكاملة تتبع خطوات متسلسلة ومنطقية:</p>
         <ol>
             <li><strong>الشعور والإحساس بالمشكلة:</strong> نقطة البداية التي تثير تساؤل الباحث.</li>
@@ -218,7 +211,7 @@
             <li><strong>توثيق المراجع وكتابة التقرير النهائي.</strong></li>
         </ol>
 
-        <h3>4. صياغة الفرضيات</h3>
+        <h3>5. صياغة الفرضيات</h3>
         <h4>أ. أنواع الفرضيات</h4>
         <ul>
             <li><strong>الفرضية الصفرية (Null Hypothesis - H₀):</strong> تفترض <strong>عدم وجود</strong> فرق أو علاقة ذات دلالة إحصائية. تُصاغ بصيغة النفي.</li>
@@ -232,7 +225,7 @@
         <h4>ب. خصائص الفرضية الجيدة</h4>
         <p>يجب أن تكون الفرضية مناسبة للغرض، بسيطة وواضحة، قادرة على شرح الحقائق، قابلة للاختبار والقياس، ومعقولة ومنسجمة مع الحقائق العلمية.</p>
 
-        <h3>5. هيكلية كتابة البحث العلمي</h3>
+        <h3>6. هيكلية كتابة البحث العلمي</h3>
         <p>تختلف هيكلية كتابة التقرير النهائي للبحث باختلاف الجهة المقدم إليها:</p>
         <ul>
             <li><strong>للنشر في مجلة علمية (مقال علمي):</strong> يكون البحث موجزًا ومكثفًا ومكتوبًا كنص متصل. عناصره الرئيسية: (عنوان، ملخص، مقدمة، منهجية، نتائج ومناقشة، مراجع).</li>
@@ -241,7 +234,6 @@
 
         <hr>
 
-        <!-- Quiz Section -->
         <h2>امتحان محوسب: اختبر فهمك للفصل الأول</h2>
         <div class="quiz-container">
             <form id="quiz-form">
@@ -266,7 +258,7 @@
                 { question: "8. الخاصية التي تعني إمكانية تطبيق نتائج العينة على مجتمع أكبر هي:", options: ["قابلية الاختبار", "الدقة والثقة", "قابلية التعميم", "الموضوعية"], answer: "قابلية التعميم" },
                 { question: "9. الهدف الأعلى والأصعب في البحث العلمي هو:", options: ["الوصف", "التفسير", "التنبؤ", "الضبط والسيطرة"], answer: "الضبط والسيطرة" },
                 { question: "10. الاعتماد على آراء الخبراء والشيوخ في المعرفة يمثل مرحلة:", options: ["الطريقة العلمية", "السلطة والتقاليد", "التجربة والخطأ", "المصادفة"], answer: "السلطة والتقاليد" },
-                { question: "11. 'فحص استفساري منظم' هو جزء من تعريف:", options: ["الفرضية", "النظرية", "البحث العلمي", "المشكلة البحثية"], answer: "البحث العلمي" },
+                { question: "11. أي من التالي يعتبر من عقبات تطبيق البحث في العلوم الإدارية؟", options: ["سهولة استخدام الطرق المخبرية", "تعقيد الظواهر الاجتماعية", "تجانس الظواهر الإدارية", "كل ما ذكر"], answer: "تعقيد الظواهر الاجتماعية" },
                 { question: "12. خاصية 'البساطة والاقتصاد' (Parsimony) تعني:", options: ["استخدام أغلى الأدوات", "تقديم أبسط تفسير ممكن", "جعل البحث معقداً", "تجاهل التكاليف"], answer: "تقديم أبسط تفسير ممكن" },
                 { question: "13. أي مما يلي يعتبر من الصفات الخلقية للباحث؟", options: ["القدرة على التحليل الإحصائي", "الصبر وتحمل المشاق", "مهارة استخدام البرامج", "كتابة التقارير"], answer: "الصبر وتحمل المشاق" },
                 { question: "14. المرحلة التي تلي تحديد المشكلة مباشرة هي:", options: ["جمع البيانات", "تحديد أهمية وأهداف البحث", "كتابة الملخص", "تقديم التوصيات"], answer: "تحديد أهمية وأهداف البحث" },
@@ -313,22 +305,23 @@
                 e.preventDefault();
                 let score = 0;
                 quizData.forEach((item, index) => {
+                    const radioButtons = document.querySelectorAll(`input[name="question${index}"]`);
                     const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
-                    const labels = document.querySelectorAll(`input[name="question${index}"]`);
-                    labels.forEach(label => {
-                        const parentLabel = label.parentElement;
-                        parentLabel.style.backgroundColor = '';
+                    
+                    radioButtons.forEach(radio => {
+                        const parentLabel = radio.parentElement;
                         parentLabel.classList.remove('correct', 'wrong');
-                        if (label.value === item.answer) {
+                        if (radio.value === item.answer) {
                             parentLabel.classList.add('correct');
                         }
                     });
+
                     if (selectedOption) {
-                        const parentLabel = selectedOption.parentElement;
                         if (selectedOption.value === item.answer) {
                             score++;
                         } else {
-                            parentLabel.classList.add('wrong');
+                            selectedOption.parentElement.classList.add('wrong');
+                            selectedOption.parentElement.classList.remove('correct');
                         }
                     }
                 });
